@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title id="Description">scratching post</title>
+    <link rel="stylesheet" href="plugins/jqwidgets/styles/jqx.base.css" type="text/css" />
+    <script type="text/javascript" src="plugins/scripts/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="plugins/jqwidgets/jqxcore.js"></script>
+    <script type="text/javascript" src="plugins/jqwidgets/jqxsplitter.js"></script>
+    <link rel="stylesheet" type="text/css" href="plugins/aos-master/dist/aos.css">
+    <script type="text/javascript">
+		jq1 = jQuery.noConflict( true );
+        jq1(document).ready(function () {
+            jq1("#mainSplitter").jqxSplitter({ width: "99%", height: "92%",splitBarSize: 20, panels: [{ size: "45%" }, { size: "55%"}] });
+            jq1("#leftSplitter").jqxSplitter({ height: "100%", orientation: "horizontal",splitBarSize: 20, panels: [{ size: "90%", collapsible: false }, { size: "10%"}] });
+        });
+		
+	
+    </script>
+    <link rel="stylesheet" href="plugins/codemirror-5.27.4/lib/codemirror.css">
+    <script src="plugins/codemirror-5.27.4/lib/codemirror.js"></script>
+    <script src="plugins/codemirror-5.27.4/addon/edit/matchbrackets.js"></script>
+    <script src="plugins/codemirror-5.27.4/addon/edit/continuelist.js"></script>
+    <script src="plugins/codemirror-5.27.4/mode/javascript/javascript.js"></script>
+    <script src="plugins/codemirror-5.27.4/mode/htmlmixed/htmlmixed.js"></script>
+    <script src="plugins/codemirror-5.27.4/mode/xml/xml.js"></script>
+    <script src="plugins/codemirror-5.27.4/mode/css/css.js"></script>
+    <!-- themes-->
+    <link rel="stylesheet" href="plugins/codemirror-5.27.4/theme/all-hallow-eve.css">
+    <link rel="stylesheet" href="plugins/codemirror-5.27.4/theme/amy.css">
+    <link rel="stylesheet" href="plugins/codemirror-5.27.4/theme/argonaut.css">
+    <link rel="stylesheet"  href="plugins/codemirror-5.27.4/theme/arona.css">
+    <link rel="stylesheet" href="plugins/codemirror-5.27.4/theme/bbedit.css">
+    <link rel="stylesheet" href="plugins/codemirror-5.27.4/theme/bespin.css">
+    <link rel="stylesheet" href="plugins/codemirror-5.27.4/theme/birds-of-paradise.css">
+    <link rel="stylesheet" href="plugins/codemirror-5.27.4/theme/black-pearl-ii.css">
+    <link rel="stylesheet" href="plugins/codemirror-5.27.4/theme/black-pearl.css">
+    <link rel="stylesheet" href="plugins/codemirror-5.27.4/theme/blackboard-black.css">
+    <link rel="stylesheet" href="plugins/codemirror-5.27.4/theme/blackboard.css">
+    <link rel="stylesheet" href="plugins/codemirror-5.27.4/theme/bongzilla.css">
+    <link rel="stylesheet" href="plugins/codemirror-5.27.4/theme/chanfle.css">
+    <link rel="stylesheet" href="plugins/codemirror-5.27.4/theme/chrome-devtools.css">
+    <link rel="stylesheet" href="plugins/codemirror-5.27.4/theme/classic-modified.css">
+    <link rel="stylesheet" href="plugins/codemirror-5.27.4/theme/clouds-midnight.css">
+    <link rel="stylesheet" href="plugins/codemirror-5.27.4/theme/clouds.css">
+    <link rel="stylesheet" href="plugins/codemirror-5.27.4/theme/cobalt.css">
+    <link rel="stylesheet" href="plugins/codemirror-5.27.4/theme/coda.css">
+    <link rel="stylesheet" href="plugins/codemirror-5.27.4/theme/cssedit.css">
+    <link rel="stylesheet" href="plugins/codemirror-5.27.4/theme/cube2media.css">
+    <link rel="stylesheet" href="plugins/codemirror-5.27.4/theme/darkpastel.css">
+    <link rel="stylesheet" href="plugins/codemirror-5.27.4/theme/dawn.css">
+    <link rel="stylesheet" href="plugins/codemirror-5.27.4/theme/django-(smoothy).css">
+    <link rel="stylesheet" href="plugins/codemirror-5.27.4/theme/django.css">
+    <link rel="stylesheet" href="plugins/codemirror-5.27.4/theme/eiffel.css">
+    <link rel="stylesheet" href="plugins/codemirror-5.27.4/theme/emacs-strict.css">
+    <link rel="stylesheet" href="plugins/codemirror-5.27.4/theme/espresso-libre.css">
+    <link rel="stylesheet" href="plugins/codemirror-5.27.4/theme/espresso-soda.css">
+    <link rel="stylesheet" href="plugins/codemirror-5.27.4/theme/espresso-tutti.css">
+    <link rel="stylesheet" href="plugins/codemirror-5.27.4/theme/espresso.css">
+    <link rel="stylesheet" href="plugins/codemirror-5.27.4/theme/fade-to-grey.css">
+    <link rel="stylesheet" href="plugins/codemirror-5.27.4/theme/fake.css">
+    <link rel="stylesheet" href="plugins/codemirror-5.27.4/theme/fantasyscript.css">
+    <link rel="stylesheet" href="plugins/codemirror-5.27.4/theme/fluidvision.css">
+    <link rel="stylesheet" href="plugins/codemirror-5.27.4/theme/freckle.css">
+    <link rel="stylesheet" href="plugins/codemirror-5.27.4/theme/friendship-bracelet.css">
+    <link rel="stylesheet" href="plugins/codemirror-5.27.4/theme/github.css">
+    <link rel="stylesheet" href="plugins/codemirror-5.27.4/theme/glitterbomb.css">
+    <link rel="stylesheet" href="plugins/codemirror-5.27.4/theme/happy-happy-joy-joy-2.css">
+    <link rel="stylesheet" href="plugins/codemirror-5.27.4/theme/idle.css">
+    <link rel="stylesheet" href="plugins/codemirror-5.27.4/theme/idlefingers.css">
+    <link rel="stylesheet" href="plugins/codemirror-5.27.4/theme/iplastic.css">
+    <link rel="stylesheet" href="plugins/codemirror-5.27.4/theme/ir_black.css">
+    <link rel="stylesheet" href="plugins/codemirror-5.27.4/theme/ir_white.css">
+    <link rel="stylesheet" href="plugins/codemirror-5.27.4/theme/johnny.css">
+    <link rel="stylesheet" href="plugins/codemirror-5.27.4/theme/juicy.css">
+    <link rel="stylesheet" href="plugins/codemirror-5.27.4/theme/krtheme.css">
+    <link rel="stylesheet" href="plugins/codemirror-5.27.4/theme/kuroir.css">
+    <link rel="stylesheet" href="plugins/codemirror-5.27.4/theme/lazy.css">
+    <link rel="stylesheet" href="plugins/codemirror-5.27.4/theme/lowlight.css">
+    <link rel="stylesheet" href="plugins/codemirror-5.27.4/theme/mac-classic.css">
+    <link rel="stylesheet" href="plugins/codemirror-5.27.4/theme/made-of-code.css">
+    <link rel="stylesheet" href="plugins/codemirror-5.27.4/theme/magicwb-(amiga).css">
+    <link rel="stylesheet" href="plugins/codemirror-5.27.4/theme/merbivore-soft.css">
+    <link rel="stylesheet" href="plugins/codemirror-5.27.4/theme/merbivore.css">
+    <link rel="stylesheet" href="plugins/codemirror-5.27.4/theme/monoindustrial.css">
+    <link rel="stylesheet" href="plugins/codemirror-5.27.4/theme/monokai-bright.css">
+    <link rel="stylesheet" href="plugins/codemirror-5.27.4/theme/monokai-fannonedition.css">
+    <link rel="stylesheet" href="plugins/codemirror-5.27.4/theme/monokai-sublime.css">
+    <link rel="stylesheet" href="plugins/codemirror-5.27.4/theme/monokai.css">
+    <link rel="stylesheet" href="plugins/codemirror-5.27.4/theme/mreq.css">
+    <link rel="stylesheet" href="plugins/codemirror-5.27.4/theme/nightlion.css">
+    <link rel="stylesheet" href="plugins/codemirror-5.27.4/theme/notebook.css">
+    <link rel="stylesheet" href="plugins/codemirror-5.27.4/theme/oceanic-muted.css">
+    <link rel="stylesheet" href="plugins/codemirror-5.27.4/theme/oceanic.css">
+    <link rel="stylesheet" href="plugins/codemirror-5.27.4/theme/pastels-on-dark.css">
+    <link rel="stylesheet" href="plugins/codemirror-5.27.4/theme/pastie.css">
+    <link rel="stylesheet" href="plugins/codemirror-5.27.4/theme/plasticcodewrap.css">
+    <link rel="stylesheet" href="plugins/codemirror-5.27.4/theme/prospettiva.css">
+    <link rel="stylesheet" href="plugins/codemirror-5.27.4/theme/putty.css">
+    <link rel="stylesheet" href="plugins/codemirror-5.27.4/theme/rails-envy.css">
+    <link rel="stylesheet" href="plugins/codemirror-5.27.4/theme/railscasts.css">
+    <link rel="stylesheet" href="plugins/codemirror-5.27.4/theme/rdark.css">
+    <link rel="stylesheet" href="plugins/codemirror-5.27.4/theme/rhuk.css">
+    <link rel="stylesheet" href="plugins/codemirror-5.27.4/theme/ryan-light.css">
+    <link rel="stylesheet" href="plugins/codemirror-5.27.4/theme/sidewalkchalk.css">
+    <link rel="stylesheet" href="plugins/codemirror-5.27.4/theme/slush-&-poppies.css">
+    <link rel="stylesheet" href="plugins/codemirror-5.27.4/theme/smoothy.css">
+    <link rel="stylesheet" href="plugins/codemirror-5.27.4/theme/solarized-(dark).css">
+    <link rel="stylesheet" href="plugins/codemirror-5.27.4/theme/solarized-(light).css">
+    <link rel="stylesheet" href="plugins/codemirror-5.27.4/theme/spacecadet.css">
+    <link rel="stylesheet" href="plugins/codemirror-5.27.4/theme/spectacular.css">
+    <link rel="stylesheet" href="plugins/codemirror-5.27.4/theme/summer-sun.css">
+    <link rel="stylesheet" href="plugins/codemirror-5.27.4/theme/summerfruit.css">
+    <link rel="stylesheet" href="plugins/codemirror-5.27.4/theme/sunburst.css">
+    <link rel="stylesheet" href="plugins/codemirror-5.27.4/theme/swyphs-ii.css">
+    <link rel="stylesheet" href="plugins/codemirror-5.27.4/theme/tango.css">
+    <link rel="stylesheet" href="plugins/codemirror-5.27.4/theme/text-ex-machina.css">
+    <link rel="stylesheet" href="plugins/codemirror-5.27.4/theme/tomorrow-night-blue.css">
+    <link rel="stylesheet" href="plugins/codemirror-5.27.4/theme/tomorrow-night-bright.css">
+    <link rel="stylesheet" href="plugins/codemirror-5.27.4/theme/tomorrow-night-eighties.css">
+    <link rel="stylesheet" href="plugins/codemirror-5.27.4/theme/dracula.css">
+    <link rel="stylesheet" href="plugins/codemirror-5.27.4/theme/tomorrow-night.css">
+    <link rel="stylesheet" href="plugins/codemirror-5.27.4/theme/tomorrow.css">
+    <link rel="stylesheet" href="plugins/codemirror-5.27.4/theme/toulousse-lautrec.css">
+    <link rel="stylesheet" href="plugins/codemirror-5.27.4/theme/toy-chest.css">
+    <link rel="stylesheet" href="plugins/codemirror-5.27.4/theme/tubster.css">
+    <link rel="stylesheet" href="plugins/codemirror-5.27.4/theme/twilight.css">
+    <link rel="stylesheet" href="plugins/codemirror-5.27.4/theme/venom.css">
+    <link rel="stylesheet" href="plugins/codemirror-5.27.4/theme/vibrant-fin.css">
+    <link rel="stylesheet" href="plugins/codemirror-5.27.4/theme/vibrant-ink.css">
+    <link rel="stylesheet" href="plugins/codemirror-5.27.4/theme/vibrant-tango.css">
+    <link rel="stylesheet" href="plugins/codemirror-5.27.4/theme/zenburnesque.css">
+    
+    <link rel="stylesheet" href="css/final.css" >
+    </head>
+    <body  >
+<div id="mySidenav" class="sidenav"> <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> <a href="#">About</a> <a href="#">howto</a> <a href="#">features</a> <a href="#">author</a>
+      <div class="dropdown">
+  <section id="header-container">
+        <select class="dropbtn" onchange="selectTheme()" id="select">
+            <option selected disabled>Select a theme</option>
+            
+            <option>all-hallow-eve</option>
+            <option>dracula</option>
+            
+            <option>amy</option>
+            <option>argonaut</option>
+            <option>arona</option>
+            <option>bbedit</option>
+            <option>bespin</option>
+            <option>birds-of-paradise</option>
+            <option>black-pearl-ii</option>
+            <option>black-pearl</option>
+            <option>blackboard-black</option>
+            <option>blackboard</option>
+            <option>bongzilla</option>
+            <option>chanfle</option>
+            <option>chrome-devtools</option>
+            <option>classic-modified</option>
+            <option>clouds-midnight</option>
+            <option>clouds</option>
+            <option>cobalt</option>
+            <option>coda</option>
+            <option>cssedit</option>
+            <option>cube2media</option>
+            <option>darkpastel</option>
+            <option>dawn</option>
+            <option>django-(smoothy)</option>
+            <option>django</option>
+            <option>eiffel</option>
+            <option>emacs-strict</option>
+            <option>espresso-libre</option>
+            <option>espresso-soda</option>
+            <option>espresso-tutti</option>
+            <option>espresso</option>
+            <option>fade-to-grey</option>
+            <option>fake</option>
+            <option>fantasyscript</option>
+            <option>fluidvision</option>
+            <option>freckle</option>
+            <option>friendship-bracelet</option>
+            <option>github</option>
+            <option>glitterbomb</option>
+            <option>happy-happy-joy-joy-2</option>
+            <option>idle</option>
+            <option>idlefingers</option>
+            <option>iplastic</option>
+            <option>ir_black</option>
+            <option>ir_white</option>
+            <option>johnny</option>
+            <option>juicy</option>
+            <option>krtheme</option>
+            <option>kuroir</option>
+            <option>lazy</option>
+            <option>lowlight</option>
+            <option>mac-classic</option>
+            <option>made-of-code</option>
+            <option>magicwb-(amiga)</option>
+            <option>merbivore-soft</option>
+            <option>merbivore</option>
+            <option>monoindustrial</option>
+            <option>monokai-bright</option>
+            <option>monokai-fannonedition</option>
+            <option>monokai-sublime</option>
+            <option>monokai</option>
+            <option>mreq</option>
+            <option>nightlion</option>
+            <option>notebook</option>
+            <option>oceanic-muted</option>
+            <option>oceanic</option>
+            <option>pastels-on-dark</option>
+            <option>pastie</option>
+            <option>plasticcodewrap</option>
+            <option>prospettiva</option>
+            <option>putty</option>
+            <option>rails-envy</option>
+            <option>railscasts</option>
+            <option>rdark</option>
+            <option>rhuk</option>
+            <option>ryan-light</option>
+            <option>sidewalkchalk</option>
+            <option>slush-&-poppies</option>
+            <option>smoothy</option>
+            <option>solarized-(dark)</option>
+            <option>solarized-(light)</option>
+            <option>spacecadet</option>
+            <option>spectacular</option>
+            <option>summer-sun</option>
+            <option>summerfruit</option>
+            <option>sunburst</option>
+            <option>swyphs-ii</option>
+            <option>tango</option>
+            <option>text-ex-machina</option>
+            <option>tomorrow-night-blue</option>
+            <option>tomorrow-night-bright</option>
+            <option>tomorrow-night-eighties</option>
+            <option>tomorrow-night</option>
+            <option>tomorrow</option>
+            <option>toulousse-lautrec</option>
+            <option>toy-chest</option>
+            <option>tubster</option>
+            <option>twilight</option>
+            <option>venom</option>
+            <option>vibrant-fin</option>
+            <option>vibrant-ink</option>
+            <option>vibrant-tango</option>
+            <option>zenburnesque</option>
+        </select>
+		  </section>
+  </div>
+    </div>
+<div id="main" style="width:100%; height: 100%" data-aos="zoom-in">
+<span  data-aos="fade-in" data-aos-easing="ease-out-cubic" data-aos-duration="4000" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Scratching Post</span>
+
+<button class="buttons" id="outfull" style="float: right; margin-top: 12px;">render fullscreen</button>
+
+<div id="mainSplitter" style=" 
+    border-radius: 10px;
+    border: 2px solid #0092CA;">
+<div>
+<div style="border: none;" id="leftSplitter">
+<div>
+<div class="tab">
+      <button class="tablinks" id="defaultOpen" onclick="opencode(event, 'htmltab')">HTML</button>
+      <button class="tablinks" onclick="opencode(event, 'csstab')">CSS</button>
+      <button class="tablinks" onclick="opencode(event, 'jstab')">JS</button>
+      
+      
+    </div>
+<div id="htmltab" class="tabcontent"><div class="btntab">
+<button  class="buttons tabbtn"   id="loadhtmlbtn">load</button>
+<input id="loadhtml" type="file"/>
+<button  class="buttons tabbtn"   id="savehtml">save</button>
+<button  class="buttons tabbtn" id="fullhtml">fullscreen</button></div>
+
+<textarea rows="4" cols="50" name="htmledit" id="htmledit" >
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Untitled</title>
+</head>
+<body>
+</body>
+</html>
+</textarea>
+</div>
+<div id="csstab" class="tabcontent">
+ <div class="btntab">
+<button  class="buttons tabbtn"   id="loadcssbtn">load</button>
+<input id="loadcss" type="file"/>
+<button  class="buttons tabbtn" id="savecss">save</button>
+<button  class="buttons tabbtn" id="fullcss">fullscreen</button></div>
+  <textarea rows="4" cols="50" name="cssedit" id="cssedit">
+		/* CSS Document */
+	</textarea>
+</div>
+<div id="jstab" class="tabcontent">
+<div class="btntab">
+<button  class="buttons tabbtn"   id="loadjsbtn">load</button>
+<input id="loadjs" type="file"/>
+<button  class="buttons tabbtn" id="savejs">save</button>
+<button  class="buttons tabbtn" id="fulljs">fullscreen</button>
+ <button class="buttons" id="upjs" >rerun js</button>
+ </div>
+  <textarea rows="4" cols="50" name="jsedit" id="jsedit">
+		
+	</textarea>
+</div>
+</div>
+<div>console goes here</div>
+</div>
+</div>
+<div>
+  <iframe style="width: 100%;height: 100%;" id="preview" src="javascript:;"></iframe>
+</div>
+</div>
+</div>
+<script src="plugins/aos-master/dist/aos.js"></script>
+<script>
+	AOS.init({
+  duration: 1000
+	});</script>
+<script src="js/jquery-3.1.0.min.js"></script>
+<script type="text/javascript" src="js/final.js"></script>
+</body>
+</html>

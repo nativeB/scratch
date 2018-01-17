@@ -1,0 +1,215 @@
+/* CSS Document */
+
+ html, body
+        {
+	height: 100%;
+	width: 100%;
+	margin: 0px;
+	padding: 6px;
+	overflow: scroll;
+	transition: background-color .5s;
+	background-color: #222831;
+	color: #0092CA;
+        }
+
+
+
+
+.sidenav {
+	height: 100%;
+	width: 0;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	background-color: #3C1B1F;
+	overflow-x: hidden;
+	transition: 0.5s;
+	padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+.buttons {
+	border: none;
+	font-size: 16px;
+	display: inline-block;
+	cursor: pointer;
+	text-decoration: none;
+	background-color: #f44336;
+	padding: 10px 32px;
+	border-radius: 10px;
+	color: white;
+	margin-right: 11px;
+}
+
+
+
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+
+
+
+div.tab {
+	border: 1px solid #ccc;
+	background-color: #f1f1f1;
+	display: flex;
+	align-content: space-between;
+	justify-content: center;
+}
+
+/* Style the buttons inside the tab */
+div.tab button {
+	background-color: inherit;
+	float: left;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	padding: 14px 16px;
+	font-size: 17px;
+	width: 33.33%;
+	-webkit-transition: all 2s ease;
+}
+
+/* Change background color of buttons on hover */
+div.tab button:hover {
+	background-color: #393E46;
+}
+
+/* Create an active/current tablink class */
+div.tab button.active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+	display: none;
+	border: 1px solid #ccc;
+	border-top: none;
+	height: 100%;
+	overflow: hidden;
+	background-color: #222831;
+}
+
+.CodeMirror {
+  line-height: 1em;
+  font-family:Consolas;
+	font-size: 16px;
+word-wrap: break-word;
+  /* Necessary so the scrollbar can be absolutely positioned within the wrapper on Lion. */
+  position: relative;
+  /* This prevents unwanted scrollbars from showing up on the body and wrapper in IE. */
+ 
+}
+.btntab {
+	display: flex;
+	justify-content: center;
+	align-content: center;
+}
+
+
+.CodeMirror-scroll {
+  overflow: auto;
+  height: 100%;
+  /* This is needed to prevent an IE[67] bug where the scrolled content
+     is visible outside of the scrolling box. */
+  position: relative;
+  outline: none;
+}
+
+.CodeMirror-gutters{
+	width: 29px;
+}
+.CodeMirror-line{
+	margin-left: 20px;
+	padding: 35px;
+} 
+
+.dropbtn {
+	background-color: #4CAF50;
+	color: white;
+	padding: 16px;
+	font-size: 16px;
+	border: none;
+	cursor: pointer;
+	width: 100%;
+}
+
+.dropdown {
+	position: relative;
+	display: inline-block;
+	width: 100%;
+}
+
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #f9f9f9;
+	min-width: 100%;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+
+
+.fullscreen{
+    z-index: 9999; 
+    width: 100%; 
+    height: 100%; 
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+	
+ }
+.fullscreenframe{
+	margin-top: 48px;
+    z-index: 9999; 
+    width: 100%; 
+    height: 90%; 
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+ }
+
+
+input[type="file"] {
+    display: none;
+}
